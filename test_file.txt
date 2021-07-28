@@ -1,8 +1,0 @@
-This is a test file.
-Classes required for the Library class diagram:
--> Library
-->Books
-->Journals
-->Members
-->Staff Members
-
