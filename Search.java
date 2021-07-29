@@ -28,4 +28,14 @@ public class Catalog implements Search {
     // return all books containing the string query in their author's name.
     return bookAuthors.get(query);
   }
+  
+  public List<Book> searchBySubjects(String query) {
+    // return all books containing the string query in their subjects.
+    return bookSubjects.get(query);
+  }
+  
+  public List<Book> searchByPublicationDates(String query) {
+    // return all books containing the string query in their Publication Dates.
+    return bookPublicationDates.get(query);
+  }
 }
