@@ -1,3 +1,11 @@
+public class Catalog {
+  private HashMap<String, List<Book>> bookTitles;
+  private HashMap<String, List<Book>> bookAuthors;
+  private HashMap<String, List<Book>> bookSubjects;
+  private HashMap<String, List<Book>> bookPublicationDates;
+
+}
+
 public interface Search {
   public List<Book> searchByTitle(String title);
   public List<Book> searchByAuthor(String author);
