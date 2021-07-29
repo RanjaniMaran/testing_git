@@ -3,7 +3,7 @@ public interface Search {
   public List<Item> searchByAuthor(String author);
   public List<Book> searchByCategory(String category);
   public List<Item> searchByPubDate(Date publishDate);
-  public List<Book> searchByISBN(String ISBN);
+  public List<Book> searchByISBN(String isbn);
 }
 
 public class Catalog implements Search {
