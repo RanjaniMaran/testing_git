@@ -1,14 +1,7 @@
-//public class Catalog {
-  //private HashMap<String, List<Item>> ItemTitles;
-  //private HashMap<String, List<Item>> ItemAuthors;
- // private HashMap<String, List<Book>> BookSubjects;
- // private HashMap<String, List<Item>> ItemPublicationDates;
-  //private HashMap<String, List<Book>> BookISBN;
-//}
 public interface Search {
   public List<Item> searchByTitle(String title);
   public List<Item> searchByAuthor(String author);
-  public List<Book> searchBySubject(String subject);
+  public List<Book> searchByCategory(String category);
   public List<Item> searchByPubDate(Date publishDate);
   public List<Book> searchByISBN(String ISBN);
 }
@@ -16,7 +9,7 @@ public interface Search {
 public class Catalog implements Search {
   private HashMap<String, List<Item>> bookTitles;
   private HashMap<String, List<Item>> bookAuthors;
-  private HashMap<String, List<Book>> bookSubjects;
+  private HashMap<String, List<Book>> bookCategory;
   private HashMap<String, List<Item>> bookPublicationDates;
   private HashMap<String, List<Book>> bookISBN;
   
@@ -30,9 +23,9 @@ public class Catalog implements Search {
     return ItemAuthors.get(query);
   }
   
-  public List<Book> searchBySubjects(String query) {
-    // return all books containing the string query in their subjects.
-    return bookSubjects.get(query);
+  public List<Book> searchByCategory(String query) {
+    // return all books containing the string query in their category.
+    return bookCategorySubjects.get(query);
   }
   
   public List<Item> searchByPublicationDates(String query) {
@@ -41,7 +34,7 @@ public class Catalog implements Search {
   }
   
   public List<Book> searchByISBN(String query) {
-    // return all books containing the string query in their Publication Dates.
+    // return all books containing the string query in their ISBN.
     return bookISBN.get(query);
   }
 }
