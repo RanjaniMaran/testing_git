@@ -25,7 +25,7 @@ public class Catalog implements Search {
   
   public List<Book> searchByCategory(String query) {
     // return all books containing the string query in their category.
-    return bookCategorySubjects.get(query);
+    return bookCategory.get(query);
   }
   
   public List<Item> searchByPublicationDates(String query) {
