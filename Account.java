@@ -12,10 +12,7 @@ public abstract class Account {
   public Date returnDate;
   public String status;
   public int fine;
-  
-  public boolean resetPassword();
-
-
+ 
 public void accountKeeping(String libraryCardNumber) {
 	switch(status) {
 	case issued: 
