@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.List;
+
 public interface Search {
   public List<Item> searchByTitle(String title);
   public List<Item> searchByAuthor(String author);
