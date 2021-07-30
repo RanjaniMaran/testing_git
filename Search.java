@@ -3,24 +3,24 @@ public interface Search {
   public List<Item> searchByAuthor(String author);
   public List<Book> searchByCategory(String category);
   public List<Item> searchByPubDate(Date publishDate);
-  public List<Book> searchByISBN(String isbn);
+  public List<Book> searchByISBN(int isbn);
 }
 
 public class Catalog implements Search {
-  private HashMap<String, List<Item>> bookTitles;
-  private HashMap<String, List<Item>> bookAuthors;
+  private HashMap<String, List<Item>> itemTitles;
+  private HashMap<String, List<Item>> itemAuthors;
   private HashMap<String, List<Book>> bookCategory;
-  private HashMap<String, List<Item>> bookPublicationDates;
+  private HashMap<String, List<Item>> itemPublicationDates;
   private HashMap<String, List<Book>> bookISBN;
   
   public List<Item> searchByTitle(String query) {
     // return all books containing the string query in their title.
-    return ItemTitles.get(query);
+    return itemTitles.get(query);
   }
 
   public List<Item> searchByAuthor(String query) {
     // return all books containing the string query in their author's name.
-    return ItemAuthors.get(query);
+    return itemAuthors.get(query);
   }
   
   public List<Book> searchByCategory(String query) {
@@ -30,7 +30,7 @@ public class Catalog implements Search {
   
   public List<Item> searchByPublicationDates(String query) {
     // return all books containing the string query in their Publication Dates.
-    return ItemPublicationDates.get(query);
+    return itemPublicationDates.get(query);
   }
   
   public List<Book> searchByISBN(String query) {
