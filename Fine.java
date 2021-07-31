@@ -4,11 +4,11 @@ private void checkForFine(String bookItemBarcode) {
   Date dueDate = bookLending.getDueDate();
   Date today = new Date();
     
-	BufferReader csvReader = new BufferedReader(new FileReader(libraryCardNumber+".csv"));
-	String row;
-	while ((row = csvReader.readLine()) != null) {
+  BufferReader csvReader = new BufferedReader(new FileReader(libraryCardNumber+".csv"));
+  String row;
+  while ((row = csvReader.readLine()) != null) {
 	}
-	    String[] data = row.split(",");{
+	String[] data = row.split(",");{
 	 
 	if (data[8].equals("issued")) {
 		
